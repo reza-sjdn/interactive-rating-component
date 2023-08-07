@@ -1,25 +1,19 @@
-let userRate;
+let userRate = 0;
 for (let i = 1; i <= 5; ++i) {
-    document.getElementById(`score-${i}`).addEventListener("click",
-    function(){save(i)});
-}
-
-function save(rate) {
-    userRate = rate;
-    const el = document.getElementById(`score-${rate}`);
-    el.className = el.className.replace("bg-medium-gray-st", "bg-orange");
-    el.className = el.className.replace("hover:bg-medium-gray", "hover:bg-orange");
-    el.className = el.className.replace("text-light-gray", "text-white");
+    document.getElementsByClassName("checkmark")[i - 1].addEventListener("click",
+    function(){userRate = i});
 }
 
 
-document.getElementById("button").addEventListener("click",
+document.getElementById("submit-btn").addEventListener("click",
 function(){thankyou(userRate)});
 
 function thankyou(userRate) {
+    if (userRate == 0) return;
+    
     document.getElementById("header").remove();
     document.getElementById("rate-box").remove();
-    document.getElementById("button").remove();
+    document.getElementById("submit-btn").remove();
 
     const thanks_img = document.createElement("img");
     thanks_img.src = "./images/illustration-thank-you.svg";

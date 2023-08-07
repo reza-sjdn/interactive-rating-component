@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -12,17 +12,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    input[type="radio"]:checked + .checkmark {
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+    }
+  </style>
 </head>
 
 
 <body class="bg-very-dark-blue font-primary flex justify-center items-center
-h-[100vh] px-6">
+ h-[100vh] px-6">
 
   <main id="main" class="bg-dark-blue text-white max-w-sm rounded-3xl
-  space-y-6 py-8 px-6">
+   space-y-6 py-8 px-6">
     <header id="header" class="space-y-4">
       <div class="w-10 h-10 bg-medium-gray-st rounded-[50%] flex justify-center
-      items-center">
+       items-center">
         <img src="./images/icon-star.svg" alt="icon-star" width="16">
       </div>
       <h1 class="font-bold text-3xl">How did we do?</h1>
@@ -32,7 +39,49 @@ h-[100vh] px-6">
       </p>
     </header>
     
-    <div id="rate-box" class="flex justify-between">
+    <form class="flex justify-between" id="rate-box">
+      <label for="rate1" class="cursor-pointer select-none">
+        <input type="radio" id="rate1" name="option" class="w-0 h-0">
+        <span class="checkmark w-12 h-12 bg-medium-gray-st
+         text-light-gray rounded-[50%] flex justify-center 
+         items-center hover:bg-medium-gray">1</span>
+      </label>
+
+      <label for="rate2" class="cursor-pointer select-none">
+        <input type="radio" id="rate2" name="option" class="w-0 h-0">
+        <span class="checkmark w-12 h-12 bg-medium-gray-st
+         text-light-gray rounded-[50%] flex justify-center 
+         items-center hover:bg-medium-gray">2</span>
+      </label>
+
+      <label for="rate3" class="cursor-pointer select-none">
+        <input type="radio" id="rate3" name="option" class="w-0 h-0">
+        <span class="checkmark w-12 h-12 bg-medium-gray-st
+         text-light-gray rounded-[50%] flex justify-center 
+         items-center hover:bg-medium-gray">3</span>
+      </label>
+
+      <label for="rate4" class="cursor-pointer select-none">
+        <input type="radio" id="rate4" name="option" class="w-0 h-0">
+        <span class="checkmark w-12 h-12 bg-medium-gray-st
+         text-light-gray rounded-[50%] flex justify-center 
+         items-center hover:bg-medium-gray">4</span>
+      </label>
+
+      <label for="rate5" class="cursor-pointer select-none">
+        <input type="radio" id="rate5" name="option" class="w-0 h-0">
+        <span class="checkmark w-12 h-12 bg-medium-gray-st
+         text-light-gray rounded-[50%] flex justify-center 
+         items-center hover:bg-medium-gray">5</span>
+      </label>
+    </form>
+
+    <input type="submit" value="SUBMIT" id="submit-btn" class="
+     bg-orange w-full py-4 rounded-3xl font-bold hover:bg-white
+      hover:text-orange">
+
+
+    <!-- <div id="rate-box" class="flex justify-between">
       <div id="score-1" class="w-12 h-12 bg-medium-gray-st flex justify-center items-center
       rounded-[50%] text-light-gray hover:bg-medium-gray">1</div>
       <div id="score-2" class="w-12 h-12 bg-medium-gray-st flex justify-center items-center
@@ -46,7 +95,7 @@ h-[100vh] px-6">
     </div>
 
     <button id="button" class="bg-orange block mx-auto py-4 rounded-3xl
-    w-full font-bold hover:bg-white hover:text-orange">SUBMIT</button>
+    w-full font-bold hover:bg-white hover:text-orange">SUBMIT</button> -->
 
   </main>
 
