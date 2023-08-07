@@ -559,10 +559,6 @@ video {
   height: 100vh;
 }
 
-.h-0 {
-  height: 0px;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -577,10 +573,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .max-w-sm {
